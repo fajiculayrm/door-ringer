@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.8s;
+}
+
+:root {
+  --main-font: "Mulish", sans-serif;
+  --white: #fff;
+  --black: #000;
+  --highlight1: #008fcf;
+  --highlight2: #8e8c91;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--highlight1);
+}
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
+  color: var(--highlight2);
+}
+@media (min-width: 1024px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+body {
+  font-family: var(--main-font);
+}
+
+/*--------------------------------------------------/*
+ * HEADER
+/*--------------------------------------------------*/
+header {
+  min-height: 100vh;
+  background-image: url(/assets/Group\ 1.png);
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 100% contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1440px) {
+  header {
+    padding-left: 15rem;
+  }
+}
+
+.navbar {
+  margin-top: 2rem;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-menu {
+  display: flex;
+}
+@media (max-width: 1024px) {
+  .nav-menu {
+    background-color: var(--highlight1);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    left: -100%;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 1024px) {
+  .nav-menu {
+    display: flex;
+  }
+}
+
+.nav-menu.active {
+  left: 0;
+}
+
+.nav-item {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+@media (min-width: 1024px) {
+  .nav-item {
+    font-size: 1.3rem;
+    margin: 0 0.3rem;
+  }
+}
+
+.hamburger {
+  cursor: pointer;
+}
+@media (min-width: 64rem) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(0.5rem) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-0.5rem) rotate(-45deg);
+}
+
+.bar {
+  background-color: var(--white);
+  display: block;
+  height: 0.2rem;
+  width: 1.5rem;
+  margin: 0.3rem 0;
+}
+
+@media (min-width: 64rem) {
+  nav .orderNow {
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 1rem;
+    padding: 0.25rem 1rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  nav .active {
+    border-bottom: 0.2rem solid var(--highlight1);
+  }
+}
+
+.mastBanner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  width: 90%;
+}
+@media (min-width: 1024px) {
+  .mastBanner {
+    align-items: flex-start;
+  }
+}
+
+.mastBanner h1 {
+  color: var(--white);
+  text-align: center;
+  font-size: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .mastBanner h1 {
+    width: 50%;
+    font-size: 3rem;
+    text-align: left;
+    margin-top: 2rem;
+  }
+}
+
+.mastBanner a {
+  margin-top: 1rem;
+  color: var(--black);
+  font-weight: 700;
+  display: inline-block;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.mastBanner a span {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.mastBanner img {
+  margin-top: 1rem;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .mastBanner img {
+    width: auto;
+    margin: 0;
+    position: absolute;
+    right: 0;
+  }
+}
+
+/*--------------------------------------------------/*
+ * MAIN
+/*--------------------------------------------------*/
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature1 {
+  width: min(90%, 1024px);
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature1Icon img {
+  margin: 0 1.5rem;
+  height: 60px;
+  width: 60px;
+}
+
+.feature1 .card {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #fff;
+}
+@media (min-width: 1024px) {
+  .feature1 .card {
+    font-size: 2rem;
+  }
+}
+
+.feature1 .card img {
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+
+.feature1 span {
+  color: var(--highlight1);
+  display: block;
+  margin-left: 55px;
+}
+@media (min-width: 1024px) {
+  .feature1 span {
+    display: inline;
+    margin: 0;
+  }
+}
+
+.feature2 {
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .feature2 {
+    background-image: url(/assets/shape1.png), url(/assets/shape2.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 75vw 75vh, 25vw auto;
+    background-position: center right, center left;
+  }
+}
+
+.feature2 .wrapper {
+  margin-top: 1rem;
+  width: min(90%, 500px);
+  display: grid;
+  grid-template-areas: "phone" "div1" "div2" "btn";
+}
+@media (min-width: 1024px) {
+  .feature2 .wrapper {
+    width: min(90%, 1024px);
+    margin: 0;
+    grid-template-areas: "phone ." "phone div1" "phone div2" "phone btn";
+  }
+}
+
+.feature2 .wrapper > img {
+  grid-area: phone;
+  margin: 0 auto;
+  padding-right: 2rem;
+  height: 400px;
+}
+@media (min-width: 1024px) {
+  .feature2 .wrapper > img {
+    height: auto;
+  }
+}
+@media (min-width: 1440px) {
+  .feature2 .wrapper > img {
+    margin-left: -10rem;
+  }
+}
+
+.feature2 .wrapper div:nth-child(2) {
+  grid-area: div1;
+}
+
+.feature2 .wrapper div:nth-child(3) {
+  grid-area: div2;
+}
+
+.feature2 .wrapper div {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.feature2 .wrapper div img {
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+
+.feature2 span {
+  color: var(--highlight2);
+  display: inline-block;
+}/*# sourceMappingURL=style.css.map */
