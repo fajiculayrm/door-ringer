@@ -16,6 +16,8 @@
     --black: #000;
     --highlight1: #008fcf;
     --highlight2: #8e8c91;
+    --highlight3: #f1f1f1;
+    --image-bg: #c2dae4;
 }
 
 li {
@@ -172,7 +174,7 @@ nav .active {
         width: 50%;
         font-size: 3rem;
         text-align: left;
-        margin-top: 2rem;
+        margin-top: 5rem;
     }
 }
 
@@ -193,13 +195,16 @@ nav .active {
 }
 
 .mastBanner img {
-    margin-top: 1rem;
+    margin-top: 3rem;
     width: 100%;
     @media (min-width: 1024px) {
         width: auto;
-        margin: 0;
+        margin-top: 5rem;
         position: absolute;
         right: 0;
+    }
+    @media (min-width: 1200px) {
+        margin: 0;
     }
 }
 
@@ -211,6 +216,10 @@ main {
     flex-direction: column;
     align-items: center;
 }
+
+/*--------------------------------------------------/*
+ * FEATURE1
+/*--------------------------------------------------*/
 
 .feature1 {
     width: min(90%, 1024px);
@@ -255,9 +264,13 @@ main {
     }
 }
 
+/*--------------------------------------------------/*
+ * FEATURE2
+/*--------------------------------------------------*/
+
 .feature2 {
     width: 100%;
-    margin-top: 5rem;
+    margin: 5rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -325,4 +338,87 @@ main {
 .feature2 span {
     color: var(--highlight2);
     display: inline-block;
+}
+
+/*--------------------------------------------------/*
+ * FEATURE3
+/*--------------------------------------------------*/
+
+.feature3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    background-color: var(--highlight3);
+}
+
+.feature3 h2 {
+    margin-top: 2rem;
+}
+
+.feature3 h2 span {
+    font-size: 1.2rem;
+    color: var(--black);
+    display: block;
+    @media (min-width: 1024px) {
+        font-size: 2rem;
+    }
+}
+
+.feature3 h3 {
+    width: min(90%, 1024px);
+    margin-top: 2.5rem;
+}
+
+.feature3 .cards {
+    margin-top: 2rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+        background-image: url(/assets/shape3.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100vw 100%;
+    }
+}
+
+.feature3 .card {
+    width: min(50%, 20rem);
+    border-radius: 2.5rem;
+    background-color: var(--image-bg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    @media (min-width: 1024px) {
+        width: 15%;
+        border-radius: 3rem;
+    }
+}
+
+.feature3 .imageInfo {
+    background-color: var(--white);
+    padding: 2rem;
+}
+
+.feature3 h4 {
+    color: var(--highlight1);
+    text-align: center;
+}
+
+.feature3 h4 img {
+    height: 2.5rem;
+    vertical-align: -0.6rem;
+}
+
+.feature3 .card img {
+    padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.feature3 p {
+    color: var(--highlight2);
 }
