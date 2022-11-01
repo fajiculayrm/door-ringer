@@ -604,7 +604,6 @@ main {
  * HowToUse
 /*--------------------------------------------------*/
 .howToUse {
-  min-height: 50vh;
   width: min(90%, 1024px);
   display: flex;
   flex-direction: column;
@@ -612,13 +611,14 @@ main {
 }
 @media (min-width: 1024px) {
   .howToUse {
+    margin-top: 2rem;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
     background-image: url(/assets/shape1\ and\ 2.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100vw 100%;
+    background-size: 100% 70vh;
   }
 }
 
@@ -627,10 +627,31 @@ main {
 }
 @media (min-width: 1024px) {
   .howToUse img {
-    width: auto;
+    width: 30rem;
   }
 }
 
 .howToUse i {
   color: var(--highlight1);
+  margin-right: 1rem;
+}
+
+.howToUse h3 {
+  color: var(--black);
+  font-family: var(--font-header);
+}
+
+.howToUse ul {
+  margin-top: 1rem;
+}
+
+.howToUse li {
+  color: var(--highlight2);
+  font-size: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .howToUse .imageInfo {
+    margin-right: 5rem;
+  }
 }/*# sourceMappingURL=style.css.map */
