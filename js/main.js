@@ -47,3 +47,14 @@ contentBox.forEach((btn) => {
         console.log(icon);
     });
 });
+
+/*--------------------------------------------------/*
+ * Readmore
+/*--------------------------------------------------*/
+
+const rdbtn = document.querySelector(".rdBtn");
+const toShow = document.querySelector(".readmore");
+
+rdbtn.addEventListener("click", () => {
+    toShow.classList.toggle("active");
+});
