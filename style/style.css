@@ -22,6 +22,7 @@
   --highlight1: #008fcf;
   --highlight2: #8e8c91;
   --highlight3: #f1f1f1;
+  --highlight4: #f1eeff;
   --image-bg: #c2dae4;
 }
 
@@ -112,12 +113,17 @@ body {
 header {
   min-height: 100vh;
   background-image: url(/assets/Group\ 1.png);
-  background-position: left top;
+  background-position: top left;
   background-repeat: no-repeat;
-  background-size: 100% contain;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 1024px) {
+  header {
+    background-size: 100% 100%;
+    background-position: center;
+  }
 }
 @media (min-width: 1440px) {
   header {
@@ -126,6 +132,7 @@ header {
 }
 
 .navbar {
+  z-index: 5;
   font-family: var(--font-main);
   background-color: var(--highlight1);
   color: var(--black);
@@ -153,7 +160,6 @@ header {
 }
 @media (max-width: 1024px) {
   .nav-menu {
-    z-index: 5;
     background-color: var(--highlight1);
     height: 100%;
     width: 100%;
@@ -191,7 +197,12 @@ header {
 @media (min-width: 1024px) {
   .nav-item {
     font-size: 1.2rem;
-    margin: 0 0.5rem;
+    margin: 0 0.3rem;
+  }
+}
+@media (min-width: 1440px) {
+  .nav-item {
+    margin: 0 1rem;
   }
 }
 
@@ -273,6 +284,7 @@ header {
     width: 80%;
     right: 5%;
     top: 25%;
+    z-index: 0;
   }
 }
 @media (min-width: 1024px) {
@@ -424,7 +436,7 @@ main {
   margin-right: 1rem;
 }
 
-.overviewExt1 span {
+.overviewExt1 h4 span {
   color: var(--highlight2);
   display: inline-block;
 }
@@ -604,26 +616,37 @@ main {
  * HowToUse
 /*--------------------------------------------------*/
 .howToUse {
-  width: min(90%, 1024px);
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 @media (min-width: 1024px) {
   .howToUse {
-    margin-top: 2rem;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
     background-image: url(/assets/shape1\ and\ 2.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% 70vh;
+    margin-top: 2rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    background-size: 100vw 70vh;
+  }
+}
+@media (min-width: 1440px) {
+  .howToUse {
+    gap: 20rem;
   }
 }
 
+.howToUse .imageInfo {
+  width: 90%, 1024px;
+  position: relative;
+}
+
 .howToUse img {
-  width: 50%;
+  width: min(70%, 15rem);
 }
 @media (min-width: 1024px) {
   .howToUse img {
@@ -643,15 +666,248 @@ main {
 
 .howToUse ul {
   margin-top: 1rem;
+  padding: 0 1rem;
 }
 
 .howToUse li {
   color: var(--highlight2);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+}
+@media (min-width: 1024px) {
+  .howToUse li {
+    font-size: 1.5rem;
+  }
 }
 
+/*--------------------------------------------------/*
+ * Tech Specs
+/*--------------------------------------------------*/
+.tech-specs {
+  margin-top: 5rem;
+}
+
+.tech-specs h3 {
+  color: var(--black);
+  margin-bottom: 2rem;
+}
+
+.tech-specs .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 @media (min-width: 1024px) {
-  .howToUse .imageInfo {
-    margin-right: 5rem;
+  .tech-specs .wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
   }
+}
+
+.tech-specs .wrapper > img {
+  width: 50%;
+}
+@media (min-width: 1024px) {
+  .tech-specs .wrapper > img {
+    width: auto;
+  }
+}
+
+.tech-specs .accordion {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.accordion .title {
+  padding: 0.5rem 0;
+  font-size: 1.3rem;
+  color: var(--highlight2);
+  border-bottom: 0.2rem solid var(--highlight1);
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 1024px) {
+  .accordion .title {
+    width: 500px;
+  }
+}
+
+.tech-specs .icon {
+  color: var(--highlight1);
+}
+
+.tech-specs .icon.active {
+  transform: rotate(45deg);
+}
+
+.tech-specs .contentBox.active .content {
+  height: 16rem;
+}
+
+.tech-specs .content {
+  transition: 0.5s;
+  height: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.tech-specs .content p {
+  margin: 2rem 0 2rem 10rem;
+  display: block;
+}
+
+.tech-specs .content span {
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+}
+
+/*--------------------------------------------------/*
+ * Choice
+/*--------------------------------------------------*/
+.choice {
+  color: var(--white);
+  padding: 10rem 0;
+  width: 100%;
+  background-image: url(/assets/shape5.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+}
+
+.choice h2 {
+  color: var(--white);
+}
+
+.choice h3 {
+  color: var(--black);
+}
+
+.choice > p {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+@media (min-width: 1024px) {
+  .choice > p {
+    width: 50%;
+    font-size: 1.3rem;
+  }
+}
+
+.choiceContent {
+  text-align: left;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+@media (min-width: 1024px) {
+  .choiceContent {
+    gap: 5rem;
+    padding: 0 2rem;
+  }
+}
+
+.choiceContent div {
+  border-left: 2rem solid var(--highlight2);
+  position: relative;
+  width: min(20%, 10rem);
+  background-color: var(--white);
+  padding: 9em 0.5rem 0.5rem 0.5rem;
+  border-radius: 0.2rem;
+}
+@media (min-width: 1024px) {
+  .choiceContent div {
+    padding-top: 5rem;
+    width: 15rem;
+  }
+}
+
+.choiceContent img {
+  width: 30%;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+@media (min-width: 1024px) {
+  .choiceContent img {
+    width: auto;
+    top: -3rem;
+    left: -0.5rem;
+  }
+}
+
+.choiceContent ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.choiceContent li {
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 1024px) {
+  .choiceContent li {
+    height: 1.8rem;
+  }
+}
+
+.content1 ul {
+  align-items: flex-start;
+}
+
+.choiceContent .content1 {
+  background-color: transparent;
+  border: none;
+}
+
+.choiceContent .fa-xmark {
+  color: red;
+}
+
+.choiceContent .fa-check {
+  color: green;
+}
+
+.choiceContent a {
+  color: var(--highlight1);
+  background-color: var(--white);
+}
+.choiceContent a :hover {
+  color: var(--white);
+  background-color: var(--highlight1);
+}
+
+/*--------------------------------------------------/*
+ * Reviews
+/*--------------------------------------------------*/
+.reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviews .wrapper {
+  width: 90%;
+}
+
+.reviews .card {
+  background-color: var(--highlight4);
+  display: flex;
+}
+
+.reviews .card img {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
