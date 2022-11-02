@@ -813,7 +813,7 @@ main {
 .choiceContent a {
     color: var(--highlight1);
     background-color: var(--white);
-    :hover {
+    &:hover {
         color: var(--white);
         background-color: var(--highlight1);
     }
