@@ -40,6 +40,7 @@ a {
 
 h1 {
   font-family: var(--font-header);
+  font-weight: 700;
   color: var(--white);
   text-align: center;
   font-size: 2rem;
@@ -88,7 +89,7 @@ h3 {
   }
 }
 
-.order {
+.orderBtn {
   font-family: var(--font-header);
   margin-top: 1rem;
   color: var(--black);
@@ -98,19 +99,21 @@ h3 {
   border-radius: 0.5rem;
   font-size: 1.2rem;
 }
-.order:hover {
+.orderBtn:hover {
   background-color: var(--highlight1);
   color: var(--white);
 }
 
 body {
+  font-family: var(--font-main);
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
 /*--------------------------------------------------/*
  * HEADER
 /*--------------------------------------------------*/
-header {
+.navContainer {
   min-height: 100vh;
   background-image: url(/assets/Group\ 1.png);
   background-position: top left;
@@ -120,13 +123,13 @@ header {
   align-items: center;
 }
 @media (min-width: 1024px) {
-  header {
+  .navContainer {
     background-size: 100% 100%;
     background-position: center;
   }
 }
 @media (min-width: 1440px) {
-  header {
+  .navContainer {
     padding-left: 15rem;
   }
 }
@@ -206,6 +209,19 @@ header {
   }
 }
 
+.nav-item .nav-item-order:hover {
+  background-color: var(--highlight1);
+  color: var(--white);
+}
+@media (min-width: 64rem) {
+  .nav-item .nav-item-order {
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 1rem;
+    padding: 0.25rem 1rem;
+  }
+}
+
 .hamburger {
   z-index: 6;
   cursor: pointer;
@@ -236,20 +252,7 @@ header {
   margin: 0.3rem 0;
 }
 
-.nav-item .orderNow:hover {
-  background-color: var(--highlight1);
-  color: var(--white);
-}
-@media (min-width: 64rem) {
-  .nav-item .orderNow {
-    background-color: var(--white);
-    color: var(--black);
-    border-radius: 1rem;
-    padding: 0.25rem 1rem;
-  }
-}
-
-.logo {
+.navbarLogo {
   position: relative;
   z-index: 10;
 }
@@ -441,7 +444,7 @@ main {
   display: inline-block;
 }
 
-.overviewExt1 .order {
+.overviewExt1 .orderBtn {
   grid-area: btn;
   margin: 0 auto;
   border: 0.15rem solid var(--highlight1);
@@ -1007,7 +1010,7 @@ main {
 /*--------------------------------------------------/*
  * Order Section
 /*--------------------------------------------------*/
-.orderSection {
+.order {
   padding: 10rem 0 5rem 0;
   width: 100%;
   background-image: url(/assets/shape6.png);
