@@ -835,6 +835,7 @@ main {
         align-items: center;
     }
     @media (min-width: 1024px) {
+        display: block;
         width: 90%;
     }
 }

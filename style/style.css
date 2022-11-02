@@ -909,6 +909,7 @@ main {
 }
 @media (min-width: 1024px) {
   .reviews {
+    display: block;
     width: 90%;
   }
 }
