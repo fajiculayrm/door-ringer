@@ -75,6 +75,15 @@ h2 {
     }
 }
 
+h2 span {
+    font-size: 1.2rem;
+    color: var(--black);
+    display: block;
+    @media (min-width: 1024px) {
+        font-size: 2rem;
+    }
+}
+
 h3 {
     font-family: var(--font-main);
     font-size: 1rem;
@@ -88,7 +97,7 @@ h3 {
 .orderBtn {
     font-family: var(--font-header);
     margin-top: 1rem;
-    color: var(--black);
+    color: var(--highlight1);
     display: inline-block;
     background-color: var(--white);
     padding: 1rem;
@@ -250,9 +259,13 @@ body {
     }
 }
 
-.mastBanner a span {
+.mastBanner a {
+    color: var(--black);
+}
+
+.mastBanner a i {
     margin-left: 1rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .mastBanner img {
@@ -309,6 +322,7 @@ main {
 }
 
 .overview .card {
+    font-family: var(--font-header);
     font-weight: 700;
     margin-top: 3rem;
     border-radius: 0.5rem;
@@ -440,15 +454,6 @@ main {
 
 .overviewExt2 h2 {
     margin-top: 2rem;
-}
-
-.overviewExt2 h2 span {
-    font-size: 1.2rem;
-    color: var(--black);
-    display: block;
-    @media (min-width: 1024px) {
-        font-size: 2rem;
-    }
 }
 
 .overviewExt2 h3 {
@@ -638,6 +643,7 @@ main {
 .tech-specs h3 {
     color: var(--black);
     margin-bottom: 2rem;
+    font-weight: 700;
 }
 
 .tech-specs .wrapper {
@@ -726,11 +732,9 @@ main {
     color: var(--white);
 }
 
+.choice p,
 .choice h3 {
-    color: var(--black);
-}
-
-.choice > p {
+    color: var(--white);
     width: 90%;
     margin: 0 auto;
     margin-top: 2rem;
@@ -840,7 +844,14 @@ main {
     }
 }
 
+.reviews h3 {
+    font-family: var(--font-header);
+    color: var(--black);
+    font-weight: 700;
+}
+
 .reviews button {
+    color: var(--highlight2);
     position: absolute;
     border: 0;
     background-color: var(--highlight3);
@@ -852,7 +863,7 @@ main {
     cursor: pointer;
     &:hover {
         background-color: var(--highlight1);
-        color: var(--black);
+        color: var(--white);
     }
     @media (max-width: 768px) {
         position: relative;
@@ -1011,10 +1022,12 @@ main {
 
 .orderBox img {
     width: 80%;
+    margin-bottom: auto;
 }
 
 .orderBox .card {
     width: auto;
+    margin: 0;
 }
 
 .orderBox .buy {
@@ -1086,4 +1099,5 @@ footer li {
 
 footer .title {
     color: var(--black);
+    font-weight: 700;
 }
