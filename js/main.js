@@ -41,6 +41,7 @@ contentBox.forEach((btn) => {
         panel.classList.toggle("active");
         btn.classList.toggle("active");
         console.log(panel);
+        console.log(btn);
 
         const icon = btn.firstElementChild.firstElementChild;
         icon.classList.toggle("active");
