@@ -34,18 +34,18 @@ contentBox.forEach((btn) => {
                         "active"
                     );
                 });
+            } else {
+                const panel = btn.lastElementChild;
+                panel.classList.toggle("active");
+                btn.classList.toggle("active");
+                console.log(panel);
+                console.log(btn);
+
+                const icon = btn.firstElementChild.firstElementChild;
+                icon.classList.toggle("active");
+                console.log(icon);
             }
         });
-
-        const panel = btn.lastElementChild;
-        panel.classList.toggle("active");
-        btn.classList.toggle("active");
-        console.log(panel);
-        console.log(btn);
-
-        const icon = btn.firstElementChild.firstElementChild;
-        icon.classList.toggle("active");
-        console.log(icon);
     });
 });
 
